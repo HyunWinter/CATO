@@ -1,0 +1,12 @@
+# GitHub
+.git
+.gitignore
+
+# Environments
+.vscode
+venv
+
+# Documents
+docs
+README.md
+LICENSE

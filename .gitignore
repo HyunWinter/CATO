@@ -1,0 +1,6 @@
+# Environments
+.vscode/
+venv/
+
+# Mlflow
+mlruns/
