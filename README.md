@@ -2,7 +2,7 @@
 
 ## About the App
 
-Development Status: Working
+Development Status: Working (2020 - 2021)
 
 Cato is an artificial intelligence chatbot for academic courses. It aims to automate the question and answering process between students and professors and help their academic success. The project will consist of an AI agent that answers questions on multiple platforms including web and mobile browsers.
 
@@ -15,7 +15,7 @@ Cato is an artificial intelligence chatbot for academic courses. It aims to auto
 
 ## Screenshots
 
-| **Chatbot** |
+| **TBU** |
 | :---: |
 
 ## Features
@@ -75,4 +75,4 @@ The libraries and tools used include:
 
 ## Copyright
 
-Copyright 2020 © <a href="https://github.com/HyunWinter" target="_blank">Hyun Winter</a>. All rights reserved.
+Copyright 2020-2021 © <a href="https://github.com/HyunWinter" target="_blank">Hyun Winter</a>. All rights reserved.
