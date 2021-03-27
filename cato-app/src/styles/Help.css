@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 5rem 10rem;
+    overflow: hidden;
+}
+
+.box h1 {
+    display: flex;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    flex-flow: row wrap;
+
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.box p {
+    display: flex;
+    flex-flow: row wrap;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.img-thumbnail {
+}
