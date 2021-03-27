@@ -11,12 +11,27 @@ Cato is an artificial intelligence chatbot for academic courses. It aims to auto
 - [Screenshots](#screenshots)
 - [Features](#features)
 - [Libraries](#libraries)
+- [Design Diagrams](#diagrams)
 - [Copyright](#copyright)
 
 ## Screenshots
 
-| **TBU** |
-| :---: |
+| **Login** | **Courses** | **Account** |
+| :---: | :---: | :---: |
+| ![Login](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/Capture_1.PNG) | ![Courses](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/Capture_2.PNG) | ![Account](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/Capture_5.PNG)
+
+| **Chatbot** | **Course Materials** |
+| :---: | :---: |
+| ![Login](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/Capture_3.PNG) | ![Courses](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/Capture_4.PNG)
+
+<a name="diagrams"></a>
+## Design Diagrams
+
+| **Detailed Class Diagram** | **Executive Class Diagram** |
+| :---: | :---: |
+| ![Class Diagram](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/DetailedClassDiagram.png) | ![Courses](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/ExecutiveClassDiagram.png)
+| **Sequence Diagram 1** | **Sequence Diagram 2** |
+| ![Class Diagram](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/SequenceDiagram1.jpg) | ![Courses](https://raw.githubusercontent.com/HyunWinter/CATO/main/images/SequenceDiagram2.jpg)
 
 ## Features
 
