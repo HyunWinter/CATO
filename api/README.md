@@ -1,46 +1,72 @@
-Verify Python version
+### Verify Python version
+```
 $ py -3 --version
+```
 
-Create Python a virtual environment
+### Create Python a virtual environment
+```
 $ py -3 -m venv venv
+```
 
-Activating virtual environment
+### Activating virtual environment
+```
 $ venv\Scripts\activate
+```
 
-De-activating virtual environment
+### De-activating virtual environment
+```
 $ venv\Scripts\deactivate
+```
 
 ######################################################################################
-Install the latest master of Haystack and install the version of torch that 
-works with the colab GPUs
+### Install the latest master of Haystack
+```
 $ pip install git+https://github.com/deepset-ai/haystack.git
-$ pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
 
-Installation of Elasticsearch API
+### install the version of torch that works with the colab GPUs
+```
+$ pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Installation of Elasticsearch API
+```
 $ docker pull elasticsearch:7.6.2
 $ docker run -d -p 9200:9200 -e "discovery.type=single-node" elasticsearch:7.6.2
 $ http://localhost:9200
+```
 
-Installation of the Flask API
-$ docker build -t qna:v1 .
-$ docker run --name qna_app -d -p 8777:8777 qna:v1
+### Installation of the Flask API
+```
+$ docker build -t CATO-API:v1 .
+$ docker run --name qna_app -d -p 8777:8777 CATO-API:v1
 $ http://localhost:8777/
+```
 
-Remove Image
-$ docker rm -f myfirstapp
+### Remove Image
+```
+$ docker rm -f CATO-API:v1
+```
 
 ######################################################################################
-Install Google Cloud CLI
+### Install Google Cloud CLI
+```
 $ gcloud init
+```
 
-Build the container with Cloud Build
+### Build the container with Cloud Build
+```
 $ gcloud builds submit --tag gcr.io/cato-81c6f/cato
+```
 
-Deploy the container to Cloud run
+### Deploy the container to Cloud run
+```
 $ gcloud beta run deploy --image gcr.io/cato-81c6f/cato
+```
 
-Setup Firebase Hosting
+### Setup Firebase Hosting
+```
 $ npm init -y # creates a package.json
 $ npm install -D firebase-tools
-
 $ ./node_modules/.bin/firebase init hosting
+```
