@@ -1,13 +1,13 @@
 <template>
-    <MDBNavbar expand="lg" dark style="background-color: #4d84e2" container>
+    <MDBNavbar expand="lg" dark style="background-color: #4d84e2" container class="ps-2 pe-2">
         <MDBNavbarBrand href="." class="bold">CATO</MDBNavbarBrand>
         <MDBNavbarToggler 
             @click="collapse1 = !collapse1" 
             target="#navbarSupportedContent">
         </MDBNavbarToggler>
         <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
-            <MDBNavbarNav class="mb-0 mb-lg-0">
-                <MDBNavbarItem to="/home">
+            <MDBNavbarNav class="mb-2 mb-lg-0">
+                <MDBNavbarItem to="/home" active>
                     Home
                 </MDBNavbarItem>
                 <MDBNavbarItem href='javascript:'
@@ -20,6 +20,8 @@
                     v-if="$route.path == '/chatbot' || $route.path == '/materials'">
                     Course Materials
                 </MDBNavbarItem>
+            </MDBNavbarNav>
+            <MDBNavbarNav right class="mb-2 mb-lg-0 me-2">
                 <MDBNavbarItem to="/account">
                     Account
                 </MDBNavbarItem>

@@ -1,4 +1,7 @@
-import { createWebHistory, createRouter } from "vue-router";
+import {
+    createWebHistory,
+    createRouter
+} from "vue-router";
 import Login from '@/components/Login';
 import Home from '@/components/Home';
 import Account from '@/components/Account';
@@ -20,53 +23,46 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const routes = [
-    {
-        path: '/',
-        name: 'Login',
-        component: Login
-    },
-    {
-        path: '/home',
-        name: 'Home',
-        component: Home,
-        meta: {
-            requiresAuth: true,
-        }
-    },
-    {
-        path: '/chatbot',
-        name: 'Chatbot',
-        component: Chatbot,
-        meta: {
-            requiresAuth: true,
-        }
-    },
-    {
-        path: '/materials',
-        name: 'Materials',
-        component: Materials,
-        meta: {
-            requiresAuth: true,
-        }
-    },
-    {
-        path: '/account',
-        name: 'Account',
-        component: Account,
-        meta: {
-            requiresAuth: true,
-        }
-    },
-    {
-        path: '/help',
-        name: 'Help',
-        component: Help,
-        meta: {
-            requiresAuth: true,
-        }
-    },
-];
+const routes = [{
+    path: '/',
+    name: 'Login',
+    component: Login
+}, {
+    path: '/home',
+    name: 'Home',
+    component: Home,
+    meta: {
+        requiresAuth: true,
+    }
+}, {
+    path: '/chatbot',
+    name: 'Chatbot',
+    component: Chatbot,
+    meta: {
+        requiresAuth: true,
+    }
+}, {
+    path: '/materials',
+    name: 'Materials',
+    component: Materials,
+    meta: {
+        requiresAuth: true,
+    }
+}, {
+    path: '/account',
+    name: 'Account',
+    component: Account,
+    meta: {
+        requiresAuth: true,
+    }
+}, {
+    path: '/help',
+    name: 'Help',
+    component: Help,
+    meta: {
+        requiresAuth: true,
+    }
+}, ];
 
 const router = createRouter({
     history: createWebHistory(),
@@ -79,15 +75,17 @@ router.beforeEach((to, from, next) => {
 
     if (requiresAuth && !currentUser) {
         alert('You are not logged in!');
-        next({ path: '/', query: { redirect: to.fullPath } })
-    }
-    else if (!requiresAuth && currentUser) {
+        next({
+            path: '/',
+            query: {
+                redirect: to.fullPath
+            }
+        })
+    } else if (!requiresAuth && currentUser) {
         next('/home')
-    }
-    else if (!requiresAuth && !currentUser) {
+    } else if (!requiresAuth && !currentUser) {
         next()
-    }
-    else {
+    } else {
         next()
     }
 })
