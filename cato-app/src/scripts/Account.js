@@ -6,7 +6,7 @@ export default {
 		ResetPassword: function () {
             var email = firebase.auth().currentUser.email;
 
-			firebase
+            firebase
 				.auth()
 				.sendPasswordResetEmail(email)
 				.then(() => {

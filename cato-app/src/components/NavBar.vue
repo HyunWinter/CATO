@@ -28,78 +28,20 @@
                 <MDBNavbarItem to="/help">
                     Help
                 </MDBNavbarItem>
+                <MDBNavbarItem to="#" v-if="isLogin">
+                    isLogin True
+                </MDBNavbarItem>
             </MDBNavbarNav>
             <MDBBtn 
                 outline="white" rounded class="mdbbtn"
-                v-on:click="Logout()">
+                v-on:click="signOut">
                 Sign Out
             </MDBBtn>
         </MDBCollapse>
     </MDBNavbar>
 </template>
 
-<script>
-import {
-    MDBBtn,
-    MDBNavbar,
-    MDBNavbarToggler,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBCollapse,
-} from 'mdb-vue-ui-kit';
-import { ref } from 'vue';
-import firebase from 'firebase';
-
-export default {
-    name: "NavBar",
-    components: {
-        MDBBtn,
-        MDBNavbar,
-        MDBNavbarToggler,
-        MDBNavbarBrand,
-        MDBNavbarNav,
-        MDBNavbarItem,
-        MDBCollapse,
-    },
-    setup() {
-        const collapse1 = ref(false);
-
-        return {
-            collapse1
-        }
-    },
-    methods: {
-        goToHome: function () {
-            this.$router.push({ path: "/home" }).catch(()=>{});
-        },
-        goToAccount: function () {
-            this.$router.push({ path: "/account" }).catch(()=>{});
-        },
-        goToCourse: function () {
-            var courseID = window.location.href.split('course=')[1];
-            this.$router.push('/chatbot?course=' + courseID).catch(()=>{});
-        },
-        goToMaterials: function () {
-            var courseID = window.location.href.split('course=')[1];
-            this.$router.push('/materials?course=' + courseID).catch(()=>{});
-        },
-        Logout: function() {
-            firebase
-				.auth()
-				.signOut()
-				.then(() => {
-					//alert('Successfully logged out');
-					this.$router.push('/');
-				})
-				.catch(error => {
-					alert(error.message);
-					this.$router.push('/');
-				});
-        },
-    },
-};
-</script>
+<script src="../scripts/NavBar.js"></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

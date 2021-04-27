@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "@/firebase";
 
 export default {
     name: "Auth",
@@ -9,30 +9,29 @@ export default {
         addSignIn: function() {
             document.querySelector(".box").classList.remove("sign-up-mode");
         },
-        SignUp: function() {
-            firebase
-                .auth()
-                .createUserWithEmailAndPassword(
-                    this.signupForm.email,
-                    this.signupForm.password
-                )
-                .then(() => {
-                    alert("Successfully created your account!");
-                    this.$router.push('/home');
-                })
-                .catch(error => {
-                    alert(error.message);
-                });
-        },
-        SignIn: async function() {
-            firebase
+        // SignUp: function() {
+        //     firebase
+        //         .auth()
+        //         .createUserWithEmailAndPassword(
+        //             this.signupForm.email,
+        //             this.signupForm.password
+        //         )
+        //         .then(() => {
+        //             alert("Successfully created your account!");
+        //             this.$router.push('/home');
+        //         })
+        //         .catch(error => {
+        //             alert(error.message);
+        //         });
+        // },
+        signIn: async function() {
+            await firebase
                 .auth()
                 .signInWithEmailAndPassword(
                     this.loginForm.email,
                     this.loginForm.password
                 )
                 .then(() => {
-                    // alert("logged in");
                     this.$router.push('/home');
                 })
                 .catch(error => {
@@ -53,8 +52,8 @@ export default {
         };
     },
     mounted() {
-        let recaptchaScript = document.createElement('script')
-        recaptchaScript.setAttribute('src', 'https://kit.fontawesome.com/64d58efce2.js')
-        document.head.appendChild(recaptchaScript)
+        let recaptchaScript = document.createElement('script');
+        recaptchaScript.setAttribute('src', 'https://kit.fontawesome.com/64d58efce2.js');
+        document.head.appendChild(recaptchaScript);
     },
 };

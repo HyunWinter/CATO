@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "firebase": "^8.2.10",
+    "firebase": "^8.4.2",
     "jquery": "^3.6.0",
     "mdb-vue-ui-kit": "^1.0.0-alpha4",
     "vue": "^3.0.0",

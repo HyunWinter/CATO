@@ -17,7 +17,7 @@
 				type="button"
 				value="Log In"
 				class="btn solid"
-				v-on:click="SignIn()"
+                v-on:click="signIn"
 			/>
         </form>
         <!-- Sign Up -->

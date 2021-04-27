@@ -46,7 +46,7 @@ export default {
     beforeMount() {
         this.GetCourses()
     },
-    // mounted() {
-    //     $(this.$refs.vuemodal).on("hidden.bs.modal", this.doSomethingOnHidden)
-    // }
+    mounted() {
+        //$(this.$refs.vuemodal).on("hidden.bs.modal", this.doSomethingOnHidden)
+    }
 };
