@@ -48,7 +48,6 @@ Cato is an artificial intelligence chatbot for academic courses. It aims to auto
   - [x] Log In
   - [x] Register
   - [ ] Delete Account
-  - [ ] Store
 - [x] Website
   - [x] Login & Registar
   - [x] Home
@@ -82,11 +81,12 @@ Cato is an artificial intelligence chatbot for academic courses. It aims to auto
 
 The libraries and tools used include:
 - <a href="https://firebase.google.com/docs/auth" target="_blank">Firebase Authentication</a>
+- <a href="https://firebase.google.com/docs/firestore" target="_blank">Firebase Firestore</a>
 - <a href="https://github.com/deepset-ai/haystack" target="_blank">Haystack</a>
 - <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a>
-- <a href="https://vuejs.org/" target="_blank">Vue.js</a>
+- <a href="https://vuejs.org/" target="_blank">Vue.js 3</a>
 - <a href="https://router.vuejs.org/" target="_blank">Vue Router</a>
-- <a href="https://github.com/mdbootstrap/Vue-Bootstrap-with-Material-Design" target="_blank">MDB (Vue Bootstrap with Material Design)</a>
+- <a href="https://github.com/mdbootstrap/Vue-Bootstrap-with-Material-Design" target="_blank">Vue Bootstrap with Material Design</a>
 
 ## Copyright
 
