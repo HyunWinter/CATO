@@ -1,6 +1,6 @@
 <template>
     <MDBNavbar expand="lg" dark style="background-color: #4d84e2" container class="ps-2 pe-2">
-        <MDBNavbarBrand href="." class="bold">CATO</MDBNavbarBrand>
+        <MDBNavbarBrand href="/home" class="bold">CATO</MDBNavbarBrand>
         <MDBNavbarToggler 
             @click="collapse1 = !collapse1" 
             target="#navbarSupportedContent">

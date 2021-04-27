@@ -23,7 +23,7 @@
     font-weight: 400;
 }
 
-.box p {
+.box p, a {
     display: flex;
     flex-flow: row wrap;
 

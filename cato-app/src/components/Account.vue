@@ -3,18 +3,11 @@
         <h1>Account Info</h1>
         <p>{{ user_email }}</p>
 
-        <h1>Account Info</h1>
+        <h1>Account Management</h1>
         <button
             type="button"
             v-on:click="ResetPassword()">
             Reset Password
-        </button>
-
-        <h1>Authentication</h1>
-        <button
-            type="button"
-            v-on:click="SignOut()">
-            Sign Out
         </button>
         <button
             type="button"

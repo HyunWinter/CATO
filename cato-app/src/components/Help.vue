@@ -21,7 +21,7 @@
         <img src="../assets/SequenceDiagram2.png" class="img-thumbnail" :style="{'padding': '20px'}" alt="Sequence Diagram 2" />
 
         <h1>Github</h1>
-        <p>The repository is currently private. (To be updated)</p>
+        <a href="https://github.com/HyunWinter/CATO">HyunWinter/CATO</a>
 
         <h1>Copyright</h1>
         <p>Copyright 2020 © Hyun Winter. All rights reserved.</p>
