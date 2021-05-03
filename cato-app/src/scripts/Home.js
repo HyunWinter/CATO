@@ -11,7 +11,7 @@ export default {
 
             coursesRef
                 .where("users", "array-contains", userID)
-                .orderBy("name")
+                //.orderBy("name")
                 .get()
                 .then((querySnapshot) => {
                     var query = '[';
