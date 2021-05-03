@@ -1,0 +1,5 @@
+Flask
+gunicorn
+futures
+farm-haystack
+firebase_admin
