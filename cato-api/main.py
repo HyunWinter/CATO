@@ -26,8 +26,8 @@ app.config["train_model"] = "/usr/app/data/train_model"
 app.config["squad_data"] = "/usr/app/data/squad20"
 
 # ElasticSearch Server Host Information
-app.config["host"] = "localhost" # add --net=host
-#app.config["host"] = "host.docker.internal" # DOES NOT WORK IN LINUX
+#app.config["host"] = "localhost" # add --net=host
+app.config["host"] = "host.docker.internal"
 #app.config["host"] = "0.0.0.0"
 app.config["username"] = ""
 app.config["password"] = ""
