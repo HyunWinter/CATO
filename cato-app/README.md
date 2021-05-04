@@ -22,3 +22,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Build and Run in Docker
+```
+docker build -t hyunwinter/cato-app .
+```
+```
+docker run -p 8080:80 --name cato-app hyunwinter/cato-app
+```
