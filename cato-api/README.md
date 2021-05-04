@@ -32,14 +32,14 @@ $ pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stabl
 ### Installation of Elasticsearch API
 ```
 $ docker pull elasticsearch:7.6.2
-$ docker run -d -p 9200:9200 -e "discovery.type=single-node" elasticsearch:7.6.2
+$ docker run -d -p 9200:9200 -e "discovery.type=single-node" elasticsearch:7.9.2
 $ http://localhost:9200
 ```
 
 ### Installation of the Flask API
 ```
-$ docker build -t cato-api:v1 .
-$ docker run --name cato-api -d -p 8777:8777 cato-api:v1
+$ docker build -t cato-api .
+$ docker run --name cato-api --net=host --gpus all -d -p 8777:8777 cato-api
 $ http://localhost:8777/
 ```
 

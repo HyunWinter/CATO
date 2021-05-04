@@ -26,8 +26,8 @@ app.config["train_model"] = "/usr/app/data/train_model"
 app.config["squad_data"] = "/usr/app/data/squad20"
 
 # ElasticSearch Server Host Information
-#app.config["host"] = "localhost"
-app.config["host"] = "host.docker.internal"
+app.config["host"] = "localhost" # add --net=host
+#app.config["host"] = "host.docker.internal" # DOES NOT WORK IN LINUX
 #app.config["host"] = "0.0.0.0"
 app.config["username"] = ""
 app.config["password"] = ""
@@ -114,7 +114,7 @@ def qna_pretrain():
     # Will change the model later because fine-tuned > distilbert > other roseta BERT 
     reader = FARMReader(
         model_name_or_path="deepset/roberta-base-squad2",
-        use_gpu=False
+        use_gpu=True
     )
 
     # Initialization of ElasticRetriever
