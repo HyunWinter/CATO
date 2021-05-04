@@ -31,8 +31,8 @@ $ pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stabl
 
 ### Installation of Elasticsearch API
 ```
-$ docker pull elasticsearch:7.9.2
-$ docker run -d -p 9200:9200 -e "discovery.type=single-node" elasticsearch:7.9.2
+$ docker pull elasticsearch:7.6.2
+$ docker run -d -p 9200:9200 -e "discovery.type=single-node" elasticsearch:7.6.2
 $ http://localhost:9200
 ```
 
@@ -46,6 +46,11 @@ $ http://localhost:8777/
 ### Remove Image
 ```
 $ docker rm -f CATO-API:v1
+```
+
+### Logs Not Showing Up?
+```
+$ docker logs -f (container id)
 ```
 
 ######################################################################################

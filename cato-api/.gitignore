@@ -1,6 +1,6 @@
 # Environments
 .vscode/
-venv/
+.venv/
 
 # Editor directories and files
 .idea
