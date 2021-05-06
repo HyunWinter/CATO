@@ -1,6 +1,4 @@
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
   
@@ -16,6 +14,7 @@ body {
 }
 
 .row {
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -23,6 +22,7 @@ body {
 }
   
 .card {
+    padding: 0;
     width: 22%;
     background: #fff;
     border: 1px solid #ccc;

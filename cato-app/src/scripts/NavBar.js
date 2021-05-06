@@ -44,4 +44,9 @@ export default {
             this.$router.push('/');
         }
     },
+    data() {
+        return {
+            courseID: window.location.href.split('course=')[1],
+        }
+    },
 };

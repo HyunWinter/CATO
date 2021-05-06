@@ -18,32 +18,37 @@
             </div>
             <div 
                 class="card new-card" 
-                v-on:click="doSomethingOnHidden()">
-                <div class="new-card-header">
+                aria-controls="addModalLabel"
+                @click="addModal = true">
+                <div class="new-card-header mt-2">
                     <h1>+</h1>
                 </div>
             </div>
         </div>
-        <!-- <div class="modal fade" tabindex="-1" role="dialog" id="myModal" ref="vuemodal">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">Add New Course</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Please enter a course id:&hellip;</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-            </div>
-        </div> -->
     </div>
+
+    <MDBModal
+        class="modal fade"
+        id="addModal"
+        tabindex="-1"
+        labelledby="addModalLabel"
+        v-model="addModal"
+        centered
+    >
+        <MDBModalHeader>
+            <MDBModalTitle id="addModalLabel"> Add a New Course </MDBModalTitle>
+        </MDBModalHeader>
+        <MDBModalBody> 
+            <MDBInput class="mb-4" label="Code" v-model="modal_code" size="lg"/>
+            <MDBInput class="mb-4" label="Title" v-model="modal_title" size="lg"/>
+            <MDBInput class="mb-4" label="Term" v-model="modal_term" size="lg"/>
+        </MDBModalBody>
+        <MDBModalFooter class="ml-2">
+            <MDBBtn @click="addModal = false"> Cancel </MDBBtn>
+            <div class="mr-2"/>
+            <MDBBtn @click="AddNewCourse()" color="primary"> Create </MDBBtn>
+        </MDBModalFooter>
+    </MDBModal>
 </template>
 
 <!-- Scripts -->

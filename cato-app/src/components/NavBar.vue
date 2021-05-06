@@ -7,17 +7,19 @@
         </MDBNavbarToggler>
         <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
             <MDBNavbarNav class="mb-2 mb-lg-0">
-                <MDBNavbarItem to="/home" active>
+                <MDBNavbarItem to="/home">
                     Home
                 </MDBNavbarItem>
                 <MDBNavbarItem href='javascript:'
                     v-on:click="goToCourse()"
-                    v-if="$route.path == '/chatbot' || $route.path == '/materials'">
+                    v-if="$route.path == '/chatbot' || $route.path == '/materials'"
+                    >
                     Chatbot
                 </MDBNavbarItem>
                 <MDBNavbarItem href="javascript:"
                     v-on:click="goToMaterials()"
-                    v-if="$route.path == '/chatbot' || $route.path == '/materials'">
+                    v-if="$route.path == '/chatbot' || $route.path == '/materials'"
+                    >
                     Course Materials
                 </MDBNavbarItem>
             </MDBNavbarNav>
@@ -43,18 +45,4 @@
 
 <script src="../scripts/NavBar.js"></script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-* {
-    font-family: "Poppins", sans-serif;
-    font-size: 23px;
-}
-
-.mdbbtn {
-    font-size: 15px;
-}
-
-.bold {
-    font-weight: bold;
-}
-</style>
+<style scoped src="../styles/NavBar.css"></style>
