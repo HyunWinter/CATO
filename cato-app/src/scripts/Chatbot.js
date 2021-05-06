@@ -107,6 +107,15 @@ export default {
             var container = this.$el.querySelector("#chatbot");
             container.scrollTop = container.scrollHeight;
         },
+        OnFeedBackSelected: function () {
+            setTimeout(
+                function() {
+                    alert("Feedback sent to the API!")
+                },
+                500
+            )
+            
+        }
 	},
     data() {
         return {

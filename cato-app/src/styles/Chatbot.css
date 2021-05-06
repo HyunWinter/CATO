@@ -63,6 +63,18 @@ html, body {
     font-size: 18px;
 }
 
+.message-secondline {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.thumbs-down,
+.thumbs-up {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
 /* User Messages */
 .sender-user {
     display: flex;
@@ -86,6 +98,7 @@ html, body {
     color: #90949C;
     font-size: 13px;
     margin-top: 8px;
+    margin-right: 8px;
 }
 
 /* Chatbot Bottom */

@@ -9,7 +9,11 @@
                 <div id="massage-list" v-for="chat in chats" v-bind:key=chat.id>
                     <div class='sender-chatbot' v-if='chat.sentBy == "chatbot"'>
                         <div class='message-chatbot'>{{ chat.message }}</div>
-                        <div class='sent-at'>{{ chat.sentAt }}</div>
+                        <div class='message-secondline'>
+                            <div class='sent-at'>{{ chat.sentAt }}</div>
+                            <div class='thumbs-up' @click='OnFeedBackSelected()'>👍</div>
+                            <div class='thumbs-down' @click='OnFeedBackSelected()'>👎︎</div>
+                        </div>
                         <div class='doc-id'>{{ chat.id }}</div>
                     </div>
                     <div class='sender-user' v-if='chat.sentBy == "user"'>
