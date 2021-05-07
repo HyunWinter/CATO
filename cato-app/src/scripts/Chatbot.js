@@ -62,7 +62,7 @@ export default {
                         message = "Unable to find the answer. Please check the context.";
                     }
                     else {
-                        message = obj.result[0];
+                        message = 'Answer: ' + obj.result[0]
                     }
                     self.SaveMessage(message, "chatbot");
                 }

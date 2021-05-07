@@ -39,7 +39,6 @@ $ http://localhost:9200
 ### Installation of the Flask API
 ```
 $ docker build -t cato-api:v1 .
-$ docker run --name cato-api --net=host --gpus all -d -p 8777:8777 cato-api:v1
 $ docker run --name cato-api --add-host=host.docker.internal:host-gateway --gpus all -d -p 8777:8777 cato-api:v1
 $ http://localhost:8777/
 ```

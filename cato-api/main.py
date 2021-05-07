@@ -132,7 +132,7 @@ def qna_pretrain():
     )
 
     answer = []
-    score = []
+    context = []
 
     for res in prediction['answers']:
         answer.append(res['answer'])
@@ -143,8 +143,7 @@ def qna_pretrain():
     return json.dumps({
         'status':'success',
         'message': 'Process succesfully', 
-        'result': answer
-        # 'score': score
+        'result': answer,
     })
 
 ####################### DOCUMENT COUNT #########################
