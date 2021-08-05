@@ -4,7 +4,7 @@
 
 Development Status: Closed (2020 - 2021)
 
-Cato is a Python API and web application designed to implement an artificial intelligence question-answering chatbot for academic courses. It aims to automate the question and answering process between students and professors to help their academic success. The application supoorts multiple platforms including web and mobile browsers.
+Cato is a Python API and web application designed to implement an artificial intelligence question-answering chatbot for academic courses. It aims to automate the question and answering process between students and professors to help their academic success. The application supports GPU acceleration with Docker and is available on web and mobile browsers.
 
 ## Table of Contents
 
